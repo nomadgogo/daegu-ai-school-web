@@ -4,29 +4,10 @@
 <head>
     <title>WEB!</title>
     <meta charset="utf-8">
-    <style>
-     h1{
-         border-bottom:10px solid red;
-    padding:30px;
-}
-
-
-
-@media all and (min-width: 550px){ 
-    #container{
-    display: grid;
-    grid-template-columns: 200px 1fr;
-}
- }
-
-        @media all and (min-width: 480px){ }
-
-
-
-
-body{font-family: 'Source Serif Pro', serif;}
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -49,15 +30,36 @@ body{font-family: 'Source Serif Pro', serif;}
 
 
 <body>
-
+    <script>
+        function night() {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            let as = document.querySelectorAll('a');
+            for(let i=0;i<as.length;i=i+1){
+                as[i].style.color = 'white';
+            }
+        }
+        function day(){
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            let as = document.querySelectorAll('a');
+            for(let i=0;i<as.length;i=i+1){
+                as[i].style.color = 'black';
+            }
+        }
+    </script>
     <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-">
-<input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-">
+        let btn = this;
+        if(btn.value === 'night'){
+            night();
+            btn.value = 'day';
+        } else {
+            day();
+            btn.value = 'night';
+        }
+    ">
+
+
 
 
     <h1><a href="index.html">WEB</a></h1>
