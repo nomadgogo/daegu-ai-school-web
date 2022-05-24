@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+    padding:0;
+}
+
+html{
+    font-size: 100%; /*기본이 16px*/
+    line-height: 1.15;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    color: white; /*여기로 전체 흰색 글자색*/
+}
+
+a{
+    background-color: transparent;
+    text-decoration: none;
+}
+
+img{
+    border-style: none;
+    vertical-align: bottom;
+}
+
+h1,h2{
+    font-weight: lighter;
+    margin:0;
+    /* color: white; */
+}
+
+
+
+/* title section */
+.title{
+    font-family: 'Dancing script', cursive;
+    font-size: 7rem; /* 7rem = 16x7 ,  112px;*/
+    margin-bottom: 2rem; /*32px;*/
+    padding-top:10vh;
+    /* text-align: center; */
+}
+
+p{
+    line-height: 1.7;
+    font-size:18px;
+    /* color: white; */
+    /* text-align: center; */
+}
+
+
+.container{
+    height: 100vh; /*뷰포트 헤이트, 내가 띄운 창에 꽉 채워서 띄운다*/
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+}
+
+.top{
+    background-image: url("./images/img1.jpg");
+    /* padding-top:10vh;
+    text-align: center; */
+}
+
+section{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center; /*여기로 전체 가운데 정렬*/
+    scroll-snap-align: start;
+}
+
+
+.menu{
+    background-image: url("./images/img2.jpg");
+}
+
+.contact{
+    background-image: url("./images/img3.jpg");
+}
+
+.btn{
+    background-color: #555;
+    font-size: 24px;
+    color: #fff;
+    padding: 16px 56px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 32px 0 36px;
+}
+
+.btn:hover{
+    background-color: #777;
+}
+
+/* 정렬먼저 */
+.contact-sns{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-sns a {
+    display: inline-block;
+    background-color: #fff;
+    color:#555;
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+    border-radius: 50%;
+    font-size: 32px;
+    padding: 12px 0 0 2px;
+    /* line-height: 60px */
+}
+
+.contact-sns a:hover{
+    background-color: rgba(255,255,255, .5);
+}
+
+/* 창 크기 700px보다 작으면 폰트 64px로 바뀌도록  */
+@media (max-width:700px) {
+    .title{
+        font-size: 64px}
+}
